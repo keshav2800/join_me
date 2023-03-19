@@ -1,0 +1,145 @@
+/** Makes Menu Selected Bar Visible (don't remove)*/
+
+#help-menu-point .menu-point-pre-bar {
+    display: unset !important;
+    opacity: 1 !important;
+}
+
+h1 {
+    margin: 0;
+}
+
+#contentContainer {
+    height: 100%;
+}
+
+
+/* Style the tab */
+
+.tab {
+    overflow: hidden;
+    padding: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 3em);
+    margin-top: 30px;
+}
+
+
+/* Style the buttons that are used to open the tab content */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+}
+
+.helpButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: #102389;
+    color: white;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    padding: 2em 12px;
+    border: 1px solid #ccc;
+    border: none;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column;
+    word-break: break-all;
+}
+
+.tabcontent {
+    animation: fadeEffect 225ms;
+    /* Fading effect takes 1 second */
+}
+
+.tabcontent img {
+    width: 70%;
+    height: auto;
+}
+
+.tabcontent a:hover {
+    color: rgb(39, 46, 146);
+}
+
+.tablinks {
+    color: black;
+    box-shadow: unset !important;
+}
+
+
+/* Go from zero to full opacity */
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.helpArticle {
+    height: calc(100vh - 100px);
+    width: 100%;
+    padding: 50px;
+}
+
+.helpHeader h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#helpImpressum p {
+    margin-top: 0;
+}
+
+.helpHeader h5 {
+    margin-top: 0;
+}
+
+.icon8Link {
+    color: #1E3190;
+}
+
+.icon8Link:hover {
+    color: rgb(255, 0, 0) !important;
+}
+
+/**Responsive*/
+
+@media (max-width: 1000px) {
+    .helpArticle {
+        padding: 50px 20px;
+        max-width: calc(100% - 40px);
+        height: unset;
+    }
+}

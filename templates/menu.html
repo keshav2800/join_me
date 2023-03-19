@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/general.css">
+<script type="text/javascript">console.log('hisdfasdasdsdf')</script>
+
+<div id="menu-push"></div>
+<div id="menu-container">
+    <!--Logo-->
+    <img src="assets/logo.png" id="menu-logo">
+
+    <!--Menu-->
+    <div id="menu-points-container">
+        <a id="board-menu-point" class="menu-point-container row" href="index.html">
+            <div class="menu-point-pre-bar hide"></div>
+            <span>
+                Board
+            </span>
+        </a>
+
+        <a id="backlog-menu-point" class="menu-point-container row" href="backlog.html">
+            <div class="menu-point-pre-bar hide"></div>
+            <span>
+                Backlog
+            </span>
+        </a>
+
+        <a id="addtask-menu-point" class="menu-point-container row" href="addtask.html">
+            <div class="menu-point-pre-bar hide"></div>
+            <span>
+                Add Task
+            </span>
+        </a>
+
+        <a id="help-menu-point" class="menu-point-container row" href="help.html">
+            <div class="menu-point-pre-bar hide"></div>
+            <span>
+                Help
+            </span>
+        </a>
+    </div>
+
+    <div class="column center">
+        <!--User Profile Picture-->
+        <img id="profile-picture" class="menu-profile-picture" src="assets/empty-profile-picture.png">
+
+        <span id="user-name"></span>
+    </div>
+
+    <!--Logut Button-->
+    <a id="logout-button" onclick="logout()">Logout</a>
+
+    <!--Responsive Menu Icon-->
+    <a id="open-menu-button" href="#responsive-menu">
+        <img src="assets/menu-icon.png">
+    </a>
+</div>
+
+<!--Responsive Menu-->
+<div id="responsive-menu">
+    <a id="close-menu-button" href="#">
+        <img src="assets/close-menu-icon.png">
+    </a>
+
+    <div id="responsive-menu-content" class="center column">
+        <a href="index.html">
+            Board
+        </a>
+        <a href="backlog.html">
+            Backlog
+        </a>
+        <a href="addtask.html">
+            Add Task
+        </a>
+        <a href="help.html">
+            Help
+        </a>
+
+        <a id="responsive-logout-button" onclick="logout()">Logout</a>
+    </div>
+</div>

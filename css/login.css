@@ -1,0 +1,174 @@
+body {
+    background: #1E3190 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#logo {
+    margin-bottom: 50px;
+}
+
+#main-container {
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    width: 260px;
+    position: relative;
+}
+
+form {
+    width: 100%;
+}
+
+/**Inputs*/
+input {
+    margin: 10px 0;
+}
+
+#password-container {
+    position: relative;
+}
+
+#password-warning-icon {
+    position: absolute;
+    background-image: url("../assets/warning-icon.png");
+    background-size: contain;
+    right: 5px;
+    top: 17px;
+    height: 30px;
+    width: 30px;
+}
+
+#password-warning-icon:hover #password-warning-container {
+    display: unset;
+}
+
+#password-warning-container {
+    background: #2d41a7;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    position: absolute;
+    top: 40px;
+    left: -90px;
+    z-index: 1;
+    width: 200px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.281);
+    display: none;
+}
+
+.error-message {
+    position: relative;
+    top: -10px;
+    left: 4px;
+    font-size: 12px;
+    color: rgb(255, 91, 91);
+}
+
+#mail-error a {
+    cursor: pointer;
+}
+
+#mail-error a {
+    text-decoration: underline;
+}
+
+/**Image Selector*/
+#image-selector {
+    height: 85px;
+    margin: 10px 0 25px 0;
+    border-radius: 50%;
+    padding: 3px;
+    border: 3px solid #1E3190;
+    cursor: pointer;
+}
+
+#image-selector:hover {
+    background: #1E3190;
+}
+
+#image-selector-container img{
+    width: 65px;
+    border-radius: 50%;
+    margin: 3px 0;
+    cursor: pointer;
+    padding: 3px;
+}
+
+#image-selector-container img:hover {
+    outline: 3px solid #1E3190;
+}
+
+#image-selector-container div {
+    justify-content: space-around;
+    width: 100%;
+}
+
+#image-selector-container h3 {
+    color: black;
+}
+
+/**Buttons*/
+button {
+    width: 100%;
+}
+
+#sign-up-button {
+    margin-top: 20px;
+}
+
+#open-login-label {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#open-login-label:hover {
+    opacity: 0.5;
+}
+
+#guest-login-button {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#guest-login-button:hover {
+    opacity: 0.5;
+}
+
+/**Registration complete*/
+
+
+#register-success-container span {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+@media(max-height: 500px) {
+    #sign-up-container {
+        flex-direction: row;
+    }
+
+    #main-container {
+        width: 400px;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #responsive-left-container {
+        margin: 0 30px;
+    }
+}

@@ -1,0 +1,229 @@
+/** Makes Menu Selected Bar Visible (don't remove)*/
+
+#board-menu-point .menu-point-pre-bar {
+    display: unset !important;
+    opacity: 1 !important;
+}
+
+#main {
+    height: 100vh;
+    width: 100%;;
+}
+
+.boardArticle {
+    margin-top: 110px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boardContainer {
+    /*padding-top: 5vh;*/
+    padding-bottom: 2vh;
+    width: calc(100% - 100px);
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 0 50px;
+    padding-bottom: 50px;
+}
+
+.boardStatusBlock {
+    width: 100%;
+    padding-bottom: 1em;
+    height: 100%;
+}
+
+.boardColumn {
+    width: 100%;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.dragAreaHighlight {
+    background: #dadada2f !important;
+}
+
+@media (max-width: 1000px) {
+    .boardContainer {
+        margin-top: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    .boardStatusBlock {
+        width: 75vw;
+        min-height: 20vh;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 0.2em;
+    }
+    .dragItem {
+        margin: 0.2em 0 !important;
+        width: 90%;
+    }
+    .boardUrgency {
+        min-width: 15px;
+    }
+}
+
+@media (max-width:500px) {
+    .boardContainer {
+        margin-top: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.boardUrgency {
+    min-width: 10px;
+    height: calc(100% + 6px);
+    top: -3px;
+    position: relative;
+}
+
+.dragItem {
+    margin: 0 10px;
+    margin-top: 10px;
+    word-wrap: break-word;
+    cursor: grab;
+    outline: 1px solid #ebebeb !important;
+    box-shadow: unset !important;
+    display: flex;
+    padding: 3px 0;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.dragItem:hover {
+    filter: brightness(0.95);
+    outline: 2px solid #00127F !important;
+}
+
+.boardImg {
+    min-width: 30px;
+    min-height: 30px;
+    height: auto;
+    background: url(../assets/draggable.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0.3em;
+    opacity: 0.1;
+}
+
+.boardText {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    font-size: 16px;
+}
+
+.textName {
+    font-size: large;
+    margin-bottom: 0.1em;
+}
+
+.taskDeleteBtn {
+    display: flex;
+    align-items: center;
+    background: url(../assets/icon\ minus.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    min-width: 40px;
+    height: 40px;
+    border: 5px solid transparent;
+    justify-self: flex-end;
+}
+
+.dragItem:hover .taskDeleteBtn {
+    display: flex;
+}
+
+.taskDeleteBtn:hover {
+    filter: brightness(0.5);
+    cursor: pointer;
+}
+
+.taskBackToBacklogBtn {
+    display: flex;
+    align-items: center;
+    background: url(../assets/back.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    min-width: 40px;
+    height: 40px;
+    border: 5px solid transparent;
+    justify-self: flex-end;
+}
+
+.dragItem:hover .taskBackToBacklogBtn {
+    display: flex;
+}
+
+.taskBackToBacklogBtn:hover {
+    filter: brightness(0.5);
+    cursor: pointer;
+}
+
+.boardDetails {
+    margin-top: 0;
+    padding: 10px 10px 0 10px;
+    background: #00000008;
+}
+
+.boardDetails h5 {
+    margin: 0;
+    color: black !important;
+    opacity: 0.4;
+}
+
+.boardDetails p {
+    margin: 0;
+}
+
+.moveToBtns {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding-bottom: 8px;
+    margin-top: 5px;
+}
+
+.taskTop {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+.textTitle {
+    font-weight: bold;
+}
+
+.textDate {
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+.taskTopTitle {
+    display: flex;
+    justify-content: flex-start;
+}

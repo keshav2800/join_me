@@ -1,0 +1,260 @@
+/** Makes Menu Selected Bar Visible (don't remove)*/
+
+#addtask-menu-point .menu-point-pre-bar {
+    display: unset !important;
+    opacity: 1 !important;
+}
+
+
+/*=================================================================*/
+
+
+/*
+    * generel container and content-wrap style
+*/
+
+#contentAddTask {
+    height: calc(100vh - 100px);
+    width: 100vw;
+    padding: 50px;
+}
+
+#content-container {
+    height: 100%;
+}
+
+
+h1,
+h5 {
+    margin: 0
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 40%;
+    height: 100px;
+    margin: 0 10px;
+    margin-bottom: 20px;
+}
+
+form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*
+* assign to containers
+*/
+
+.taskImgCon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: none !important;
+}
+
+
+/**render container*/
+
+.assign-to-container {
+    margin: 3px;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: gray;
+    
+}
+
+.assign-to-container:hover {
+    background: rgb(247, 247, 247)
+}
+
+.assign-to-container img {
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    border: 3px white solid;
+    padding: 2px;
+}
+
+.selected-assign-to-container img {
+    border: 3px #102389 solid !important;
+}
+
+
+/*==== some changes to enable scrollable array ====*/
+
+.assigendTo-wrapper {
+    overflow-x:auto;
+    white-space: nowrap;
+    border-radius: 5px;
+    border: 1px lightgray solid;    
+}
+
+.assignedContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 40%;
+    max-width: 40%;
+    margin: 0 10px;
+    margin-bottom: 20px;
+    box-shadow: unset !important;
+}
+
+
+/*=================================================================*/
+
+
+/*
+ * input and labels styles
+*/
+
+label {
+    font-weight: bold;
+    color: #102389;
+    margin-bottom: 5px;
+}
+
+input {
+    font-family: 'PT Sans', sans-serif;
+    box-shadow: unset !important;
+}
+
+input::-webkit-calendar-picker-indicator {
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+    opacity: 0.5;
+    position: absolute;
+    right: 40px;
+}
+
+
+/*=================================================================*/
+
+
+/*
+    * selcect styles
+*/
+
+select {
+    border: transparent;
+    font-size: 18px;
+    font-family: 'PT Sans', sans-serif;
+    outline: none;
+    box-shadow: unset !important;
+    min-width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Some browsers will not display the caret when using calc, so we put the fallback first */
+    background: url("../assets/chevron .png") white no-repeat 98.5% !important;
+    /* !important used for overriding all other customisations */
+    background: url("../assets/chevron .png") white no-repeat calc(100% - 5px) !important;
+    /* Better placement regardless of input width */
+}
+
+
+/*For IE*/
+
+select::-ms-expand {
+    display: none;
+}
+
+select:focus {
+    cursor: pointer;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+
+/*=================================================================*/
+
+
+/*
+    * button styles
+*/
+
+button {
+    min-width: 40%;
+    color: white;
+    font-size: 16px;
+    padding: 13px !important;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    margin-top: 20px;
+}
+
+#buttonCancel {
+    background: gray;
+}
+
+
+/*=================================================================*/
+
+
+/*
+    * textarea style
+*/
+
+textarea {
+    font-family: 'PT Sans', sans-serif;
+    resize: none;
+    box-shadow: none !important;
+
+}
+
+
+/*=================================================================*/
+
+
+/*=================================================================*/
+
+
+/*=================================================================*/
+
+
+/*
+    * MEDIA QUERIES
+*/
+@media (max-width: 1000px) {
+
+    header {
+        margin-bottom: 30px;
+    }
+
+    .inputContainer {
+        width: 100% !important;
+    }
+
+    #contentAddTask {
+        padding: 50px 20px;
+        max-width: calc(100% - 40px);
+        height: fit-content;
+    }
+
+    .mediaCol {
+        flex-direction: column !important;
+    }
+
+    .assignedContainer {
+        min-width: 100% ;
+    }
+}

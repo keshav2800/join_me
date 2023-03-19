@@ -1,0 +1,226 @@
+#menu-push {
+    width: 200px;
+}
+
+#menu-container {
+    height: calc(100vh - 60px);
+    background: #1E3190;
+    width: 200px;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    box-shadow: #EDEDED 10px 0 10px;
+    z-index: 10;
+}
+
+a {
+    color: white;
+}
+
+/*Menu Logo*/
+#menu-logo {
+    height: 71px;
+    margin-bottom: 50px;
+}
+
+/*Menu Points*/
+#menu-points-container {
+    width: 100%;
+    height: 100%;    
+}
+
+.menu-point-container {
+    height: 40px;
+    margin: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.menu-point-container:hover .menu-point-pre-bar{
+    display: unset !important;
+    opacity: 0.3
+}
+
+.menu-point-container span {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.menu-point-pre-bar {
+    width: 7px;
+    height: 100%;
+    background: white;
+    display: none;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+/**Profile Picture*/
+#profile-picture {
+    border-radius: 50%;
+    height: 60px;
+    border: 3px solid white;
+    padding: 3px;
+}
+
+/**Username*/
+#user-name {
+    font-size: 18px;
+    margin: 10px 0;
+    color: white;
+}
+
+/**Logout Button*/
+#logout-button {
+    font-size: 14px;
+    margin-top: 15px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#logout-button:hover {
+    text-decoration: underline;
+}
+
+/**Responsive*/
+#responsive-menu {
+    display: flex;
+    height: calc(100vh - 75px);
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    display: none;
+    top: 0;
+    padding-top: 75px;
+}
+
+#responsive-menu-content {
+    background: #1E3190;
+    width: 100%;
+}
+
+#responsive-menu a {
+    margin: 20px;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+#responsive-menu a:hover {
+    opacity: 0.5
+}
+
+/**Menu Icon*/
+#open-menu-button {
+    display: none;
+    border-radius: 50%;
+}
+
+#open-menu-button img {
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#close-menu-button {
+    display: none;
+    position: absolute;
+    background: #1E3190;
+    opacity: 1 !important;
+    right: 0;
+    top: -3px;
+}
+
+#close-menu-button img {
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#open-menu-button{
+    display: none;
+}
+
+#responsive-menu:target {
+    display: flex; 
+}
+
+#responsive-logout-button {
+    position: absolute;
+    opacity: 0.7;
+    font-size: 13px !important;
+    bottom: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media(min-width: 1000px) {
+    #responsive-menu {
+        display: none !important;
+    }
+}
+
+@media(max-width: 1000px) {
+    #menu-container {
+        height: 35px;
+        padding: 20px;
+        width: calc(100% - 40px);
+        align-items: center;
+        box-shadow: #EDEDED 0 10px 10px;
+        flex-direction: row;
+        box-shadow:none;
+        position: fixed;
+        top: 0;
+    }
+
+    #logout-button {
+        display: none;
+    }
+
+    #menu-push {
+        height: 75px;
+    }
+
+    #menu-logo {
+        height: 35px;
+        margin: auto 0;
+        margin-right: auto;
+    }
+
+    #menu-points-container {
+        display: none;
+    }
+
+    #profile-picture {
+        height: 35px;
+        margin-right: 20px;
+    }
+
+    #user-name {
+        display: none;
+    }
+
+    #reponsive-menu-icon {
+        display: unset
+    }
+
+    #open-menu-button {
+        display: unset;
+    }
+
+    #open-menu-button img {
+        display: unset;
+    }
+
+    #close-menu-button {
+        display: unset;
+    }
+
+    #close-menu-button img {
+        display: unset;
+    }
+}
